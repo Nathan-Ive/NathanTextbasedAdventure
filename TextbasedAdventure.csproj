@@ -43,6 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Actors.cs" />
+    <Compile Include="Events.cs" />
+    <Compile Include="Items.cs" />
+    <Compile Include="Scenes.cs" />
+    <Compile Include="Skills.cs" />
+    <Compile Include="TemporaryThings\Animals.cs" />
+    <Compile Include="TemporaryThings\Cat.cs" />
+    <Compile Include="TemporaryThings\Lion.cs" />
+    <Compile Include="MainProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,0 +1,8 @@
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\bin\Debug\TextbasedAdventure.exe.config
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\bin\Debug\TextbasedAdventure.exe
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\bin\Debug\TextbasedAdventure.pdb
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\obj\Debug\TextbasedAdventure.csproj.AssemblyReference.cache
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\obj\Debug\TextbasedAdventure.csproj.CoreCompileInputs.cache
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\obj\Debug\TextbasedAdventure.exe
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\obj\Debug\TextbasedAdventure.pdb
+C:\Users\ncwiv\Desktop\School Stuff\School GitHub Repos\4th Term\C# Repositories\NathanTextbasedAdventure\obj\Debug\TextbasedAdventure.exe.config

@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace TextbasedAdventure
 {
-    internal class Program
+    internal class Lion : Animals
     {
-
-        static void Main(string[] args)
+        public Lion(string name) : base(name)
         {
-            MainProgram Program1 = new MainProgram();
-            Program1.Start();
         }
+
     }
 }
