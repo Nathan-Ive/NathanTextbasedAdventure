@@ -1,18 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RulerOfTheTomb.Core;
 
-namespace TextbasedAdventure
+namespace RulerOfTheTomb
 {
-    internal class Program
+    /// <summary>
+    /// Entry point for the Ruler of the Tomb console application.
+    /// Constructs a GameSession and runs the main loop until an ending fires.
+    /// </summary>
+    public static class Program
     {
-
-        static void Main(string[] args)
+        /// <summary>
+        /// Application entry point. Prompts for a player name and starts the session.
+        /// </summary>
+        /// <param name="args">Command-line arguments (unused).</param>
+        public static void Main(string[] args)
         {
-            MainProgram Program1 = new MainProgram();
-            Program1.Start();
+            System.Console.WriteLine("Ruler of the Tomb");
+            System.Console.WriteLine("-----------------");
+            System.Console.Write("Enter your name: ");
+            string name = System.Console.ReadLine() ?? "Skeleton";
+
+            var session = new GameSession(string.IsNullOrWhiteSpace(name) ? "Skeleton" : name);
+            session.Run();
         }
     }
 }

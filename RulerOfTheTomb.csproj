@@ -46,6 +46,7 @@
     <Compile Include="Actors.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Items.cs" />
+    <Compile Include="Utility\RandomSource.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\HealMonkey.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\MonkeyTower.cs" />
     <Compile Include="Scenes.cs" />
@@ -61,5 +62,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
