@@ -46,14 +46,17 @@
     <Compile Include="Actors.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Items.cs" />
+    <Compile Include="TemporaryThings\Tower Defense Task\HealMonkey.cs" />
+    <Compile Include="TemporaryThings\Tower Defense Task\MonkeyTower.cs" />
     <Compile Include="Scenes.cs" />
     <Compile Include="Skills.cs" />
-    <Compile Include="TemporaryThings\Animals.cs" />
-    <Compile Include="TemporaryThings\Cat.cs" />
-    <Compile Include="TemporaryThings\Lion.cs" />
+    <Compile Include="TemporaryThings\Animal Task\Animals.cs" />
+    <Compile Include="TemporaryThings\Animal Task\Cat.cs" />
+    <Compile Include="TemporaryThings\Animal Task\Lion.cs" />
     <Compile Include="MainProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemporaryThings\Tower Defense Task\Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TextbasedAdventure.TemporaryThings.Tower_Defense_Task;
 
 namespace TextbasedAdventure
 {
@@ -11,18 +12,15 @@ namespace TextbasedAdventure
         Cat kitty1 = new Cat("Maya", 2);
         Lion lion1 = new Lion("Bob");
 
+        MonkeyTower attackTower = new MonkeyTower("Dart Monkey");
+        HealMonkey supportTower = new HealMonkey("Healer Monkey");
+
         public void Start() 
         {
-
-            kitty1.Meow();
-            kitty1.Sleep();
-            kitty1.SayName();
-
-            lion1.SayName();
-            lion1.ROAR();
-        
-        
-        
+            attackTower.PlaceTower();
+            attackTower.Shoot();
+            supportTower.PlaceTower();
+            supportTower.Heal();        
         }
 
     }
