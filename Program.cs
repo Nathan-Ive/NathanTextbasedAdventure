@@ -1,4 +1,5 @@
 using RulerOfTheTomb.Core;
+using TextbasedAdventure.TemporaryThings.Abstract_TD_Task;
 
 namespace RulerOfTheTomb
 {
@@ -14,13 +15,8 @@ namespace RulerOfTheTomb
         /// <param name="args">Command-line arguments (unused).</param>
         public static void Main(string[] args)
         {
-            System.Console.WriteLine("Ruler of the Tomb");
-            System.Console.WriteLine("-----------------");
-            System.Console.Write("Enter your name: ");
-            string name = System.Console.ReadLine() ?? "Skeleton";
-
-            var session = new GameSession(string.IsNullOrWhiteSpace(name) ? "Skeleton" : name);
-            session.Run();
+            DartMonkey monkey1 = new DartMonkey();
+            SuperMonkey monkey2 = new SuperMonkey();
         }
     }
 }

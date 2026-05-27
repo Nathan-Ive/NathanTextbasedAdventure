@@ -46,6 +46,9 @@
     <Compile Include="Actors.cs" />
     <Compile Include="Events.cs" />
     <Compile Include="Items.cs" />
+    <Compile Include="TemporaryThings\Abstract TD Task\AbstrTower.cs" />
+    <Compile Include="TemporaryThings\Abstract TD Task\DartMonkey.cs" />
+    <Compile Include="TemporaryThings\Abstract TD Task\SuperMonkey.cs" />
     <Compile Include="Utility\RandomSource.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\HealMonkey.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\MonkeyTower.cs" />
