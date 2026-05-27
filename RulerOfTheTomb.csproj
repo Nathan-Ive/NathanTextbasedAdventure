@@ -43,17 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Actors.cs" />
-    <Compile Include="Events.cs" />
-    <Compile Include="Items.cs" />
+    <Compile Include="Combat\Actor.cs" />
+    <Compile Include="Combat\Enemy.cs" />
+    <Compile Include="Combat\EquipmentSlot.cs" />
+    <Compile Include="Combat\Player.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\AbstrTower.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\DartMonkey.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\SuperMonkey.cs" />
     <Compile Include="Utility\RandomSource.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\HealMonkey.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\MonkeyTower.cs" />
-    <Compile Include="Scenes.cs" />
-    <Compile Include="Skills.cs" />
     <Compile Include="TemporaryThings\Animal Task\Animals.cs" />
     <Compile Include="TemporaryThings\Animal Task\Cat.cs" />
     <Compile Include="TemporaryThings\Animal Task\Lion.cs" />
