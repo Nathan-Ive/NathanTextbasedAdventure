@@ -47,6 +47,11 @@
     <Compile Include="Combat\Enemy.cs" />
     <Compile Include="Combat\EquipmentSlot.cs" />
     <Compile Include="Combat\Player.cs" />
+    <Compile Include="Items\Alignment.cs" />
+    <Compile Include="Items\Equipment.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\KeyItem.cs" />
+    <Compile Include="Items\Usable.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\AbstrTower.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\DartMonkey.cs" />
     <Compile Include="TemporaryThings\Abstract TD Task\SuperMonkey.cs" />

@@ -7,7 +7,9 @@ namespace RulerOfTheTomb.Combat
     /// </summary>
     public class Player : Actor
     {
-        public Player(string name, int maxHp, int maxMp, int strength, int magic, int defense, int magicDefense, int speed) : base(name, maxHp, maxMp, strength, magic, defense, magicDefense, speed)
+        public Player(string name, int maxHp, int maxMp, 
+                      int strength, int magic, int defense, int magicDefense, int speed) 
+            : base(name, maxHp, maxMp, strength, magic, defense, magicDefense, speed)
         {
         }
     }

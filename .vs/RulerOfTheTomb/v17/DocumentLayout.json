@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\combat\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\combat\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\combat\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\combat\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:items\\equipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\items\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:items\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\items\\usable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:items\\usable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\items\\keyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:items\\keyitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,24 +47,8 @@
       "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|TextbasedAdventure.csproj|solutionrelative:mainprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\utility\\randomsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\utility\\randomsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:utility\\randomsource.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\combat\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\combat\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\combat\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\actor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|c:\\users\\ncwiv\\desktop\\school stuff\\school github repos\\4th term\\c# repositories\\nathantextbasedadventure\\combat\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|solutionrelative:combat\\equipmentslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DAB0C8B7-ED49-442E-A16E-565073680B6C}|RulerOfTheTomb.csproj|C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\temporarythings\\abstract td task\\abstrtower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,11 +94,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Equipment.cs",
+              "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Equipment.cs",
+              "RelativeDocumentMoniker": "Items\\Equipment.cs",
+              "ToolTip": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Equipment.cs",
+              "RelativeToolTip": "Items\\Equipment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T09:14:19.158Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Item.cs",
+              "RelativeDocumentMoniker": "Items\\Item.cs",
+              "ToolTip": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Item.cs",
+              "RelativeToolTip": "Items\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T09:14:03.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Usable.cs",
+              "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Usable.cs",
+              "RelativeDocumentMoniker": "Items\\Usable.cs",
+              "ToolTip": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\Usable.cs",
+              "RelativeToolTip": "Items\\Usable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T09:11:56.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "KeyItem.cs",
+              "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\KeyItem.cs",
+              "RelativeDocumentMoniker": "Items\\KeyItem.cs",
+              "ToolTip": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Items\\KeyItem.cs",
+              "RelativeToolTip": "Items\\KeyItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-27T09:11:37.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "MainProgram.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\MainProgram.cs",
               "RelativeDocumentMoniker": "MainProgram.cs",
@@ -95,7 +163,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "EquipmentSlot.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Combat\\EquipmentSlot.cs",
               "RelativeDocumentMoniker": "Combat\\EquipmentSlot.cs",
@@ -108,20 +176,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Combat\\Player.cs",
               "RelativeDocumentMoniker": "Combat\\Player.cs",
               "ToolTip": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Combat\\Player.cs",
               "RelativeToolTip": "Combat\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-27T08:55:45.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Combat\\Enemy.cs",
               "RelativeDocumentMoniker": "Combat\\Enemy.cs",
@@ -134,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Actor.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Combat\\Actor.cs",
               "RelativeDocumentMoniker": "Combat\\Actor.cs",
@@ -147,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "SuperMonkey.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Abstract TD Task\\SuperMonkey.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Abstract TD Task\\SuperMonkey.cs",
@@ -159,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "DartMonkey.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Abstract TD Task\\DartMonkey.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Abstract TD Task\\DartMonkey.cs",
@@ -171,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "AbstrTower.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Abstract TD Task\\AbstrTower.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Abstract TD Task\\AbstrTower.cs",
@@ -183,7 +251,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Tower.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Tower Defense Task\\Tower.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Tower Defense Task\\Tower.cs",
@@ -195,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "RandomSource.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Utility\\RandomSource.cs",
               "RelativeDocumentMoniker": "Utility\\RandomSource.cs",
@@ -203,12 +271,11 @@
               "RelativeToolTip": "Utility\\RandomSource.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T09:28:37.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T09:28:37.108Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "MonkeyTower.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Tower Defense Task\\MonkeyTower.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Tower Defense Task\\MonkeyTower.cs",
@@ -220,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -228,12 +295,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T09:16:10.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-20T09:16:10.055Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "HealMonkey.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Tower Defense Task\\HealMonkey.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Tower Defense Task\\HealMonkey.cs",
@@ -245,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "MonkeyTower.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Tower Defense Task\\MonkeyTower.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Tower Defense Task\\MonkeyTower.cs",
@@ -257,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "Tower.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\TemporaryThings\\Tower Defense Task\\Tower.cs",
               "RelativeDocumentMoniker": "TemporaryThings\\Tower Defense Task\\Tower.cs",
@@ -269,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "MainProgram.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\MainProgram.cs",
               "RelativeDocumentMoniker": "MainProgram.cs",
@@ -281,7 +347,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ncwiv\\Desktop\\School Stuff\\School GitHub Repos\\4th Term\\C# Repositories\\NathanTextbasedAdventure\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
