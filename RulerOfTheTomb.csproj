@@ -46,6 +46,7 @@
     <Compile Include="Combat\Actor.cs" />
     <Compile Include="Combat\Enemy.cs" />
     <Compile Include="Combat\EquipmentSlot.cs" />
+    <Compile Include="Combat\Inventory.cs" />
     <Compile Include="Combat\Player.cs" />
     <Compile Include="Items\Alignment.cs" />
     <Compile Include="Items\Equipment.cs" />
