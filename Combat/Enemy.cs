@@ -1,3 +1,5 @@
+using System;
+
 namespace RulerOfTheTomb.Combat
 {
     /// <summary>
@@ -22,6 +24,18 @@ namespace RulerOfTheTomb.Combat
             : base(name, maxHp, maxMp, strength, magic, defense, magicDefense, speed)
         {
             IsFinalBoss = isFinalBoss;
+        }
+
+        /// <summary>
+        /// Chooses what action this enemy takes on its turn. Default behavior is a basic attack,
+        /// but specific enemies (Legless Fellow, Riddling Trove, Legend King) will override this
+        /// to add patterns, item use, or event-triggering skills.
+        /// </summary>
+        /// <param name="target">The actor this enemy is fighting, typically the Player.</param>
+        public virtual void TakeTurn(Actor target)
+        {
+            int dealt = target.TakeDamage(Strength);
+            Console.WriteLine($"{Name} attacks {target.Name} for {dealt} damage.");
         }
     }
 }

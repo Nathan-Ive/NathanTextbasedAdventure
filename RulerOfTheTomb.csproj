@@ -44,15 +44,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Combat\Actor.cs" />
+    <Compile Include="Combat\CombatEncounter.cs" />
+    <Compile Include="Combat\Ending.cs" />
     <Compile Include="Combat\Enemy.cs" />
     <Compile Include="Combat\EquipmentSlot.cs" />
     <Compile Include="Combat\Inventory.cs" />
     <Compile Include="Combat\Player.cs" />
+    <Compile Include="Combat\PlayerStatus.cs" />
+    <Compile Include="Core\EndingDisplay.cs" />
+    <Compile Include="Core\GameSession.cs" />
+    <Compile Include="Core\SceneFactory.cs" />
     <Compile Include="Items\Alignment.cs" />
     <Compile Include="Items\Equipment.cs" />
     <Compile Include="Items\Item.cs" />
     <Compile Include="Items\KeyItem.cs" />
     <Compile Include="Items\Usable.cs" />
+    <Compile Include="Scenes\Choice.cs" />
+    <Compile Include="Scenes\Event.cs" />
+    <Compile Include="Scenes\FinalScene.cs" />
+    <Compile Include="Scenes\InputParser.cs" />
+    <Compile Include="Scenes\NegationTerms.cs" />
+    <Compile Include="Scenes\NonCombatScene.cs" />
+    <Compile Include="Scenes\NormalScene.cs" />
+    <Compile Include="Scenes\Scene.cs" />
+    <Compile Include="Scenes\SceneHelpers.cs" />
     <Compile Include="Skills\LearnedSkill.cs" />
     <Compile Include="Skills\Skill.cs" />
     <Compile Include="Skills\SkillEffectType.cs" />
@@ -74,8 +89,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Scenes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
