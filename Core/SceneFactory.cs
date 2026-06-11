@@ -16,7 +16,7 @@ namespace RulerOfTheTomb.Core
         public static Scene CreateScene1()
         {
             var scene = new NonCombatScene("Scene 1 — The Awakening");
-            // TODO: populate events (grave-digging choices, pouch pickup, exit) during content phase.
+            // TODO: populate events (grave-digging choices, pouch pickup, exit).
             return scene;
         }
 

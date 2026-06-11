@@ -10,20 +10,12 @@ namespace RulerOfTheTomb.Combat
     public class Enemy : Actor
     {
         /// <summary>
-        /// Whether defeating this enemy ends the game with an ending rather than
-        /// just returning the player to the scene flow. True only for the Legend King.
-        /// </summary>
-        public bool IsFinalBoss { get; protected set; }
-
-        /// <summary>
         /// Constructs an enemy with the given stats. By default, enemies are not the final boss.
         /// </summary>
         public Enemy(string name, int maxHp, int maxMp,
-                     int strength, int magic, int defense, int magicDefense, int speed,
-                     bool isFinalBoss = false)
+                     int strength, int magic, int defense, int magicDefense, int speed)
             : base(name, maxHp, maxMp, strength, magic, defense, magicDefense, speed)
         {
-            IsFinalBoss = isFinalBoss;
         }
 
         /// <summary>

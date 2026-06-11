@@ -31,8 +31,8 @@ namespace RulerOfTheTomb.Combat
         /// </summary>
         /// <param name="name">The player's display name.</param>
         public Player(string name)
-            : base(name, maxHp: 100, maxMp: 30,
-                   strength: 15, magic: 8, defense: 5, magicDefense: 5, speed: 10)
+            : base(name, maxHp: 200, maxMp: 30,
+                   strength: 15, magic: 15, defense: 15, magicDefense: 15, speed: 15)
         {
             Status = PlayerStatus.Normal;
             ReviveUsed = false;

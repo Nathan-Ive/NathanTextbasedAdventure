@@ -139,7 +139,7 @@ namespace RulerOfTheTomb.Combat
                     target.TakeDamage(Magic + skill.Power);
                     break;
                 case SkillEffectType.Heal:
-                    target.Heal(skill.Power);
+                    Heal(skill.Power);
                     break;
                 case SkillEffectType.Event:
                     // Event skills do nothing on their own; the OnUse callback handles it.

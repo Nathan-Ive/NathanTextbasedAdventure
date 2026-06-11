@@ -45,7 +45,7 @@ namespace RulerOfTheTomb.Core
         {
             Console.WriteLine("[Ruler of the Tomb — Good Ending]");
             Console.WriteLine();
-            Console.WriteLine("[Ending narration placeholder. Replaced during the content phase.]");
+            Console.WriteLine("[Ending narration placeholder.]");
         }
 
         /// <summary>
@@ -56,7 +56,7 @@ namespace RulerOfTheTomb.Core
         {
             Console.WriteLine("[Tyrant of the Tomb — Evil Ending]");
             Console.WriteLine();
-            Console.WriteLine("[Ending narration placeholder. Replaced during the content phase.]");
+            Console.WriteLine("[Ending narration placeholder.]");
         }
 
         /// <summary>
@@ -66,7 +66,7 @@ namespace RulerOfTheTomb.Core
         {
             Console.WriteLine("[Doomed to the Tomb — Bad Ending]");
             Console.WriteLine();
-            Console.WriteLine("[Ending narration placeholder. Replaced during the content phase.]");
+            Console.WriteLine("[Ending narration placeholder.]");
         }
     }
 }

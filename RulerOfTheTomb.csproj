@@ -47,6 +47,7 @@
     <Compile Include="Combat\CombatEncounter.cs" />
     <Compile Include="Combat\Ending.cs" />
     <Compile Include="Combat\Enemy.cs" />
+    <Compile Include="Combat\EnemyLibrary.cs" />
     <Compile Include="Combat\EquipmentSlot.cs" />
     <Compile Include="Combat\Inventory.cs" />
     <Compile Include="Combat\Player.cs" />
@@ -54,11 +55,14 @@
     <Compile Include="Core\EndingDisplay.cs" />
     <Compile Include="Core\GameSession.cs" />
     <Compile Include="Core\SceneFactory.cs" />
+    <Compile Include="Combat\FinalBoss.cs" />
     <Compile Include="Items\Alignment.cs" />
     <Compile Include="Items\Equipment.cs" />
     <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\ItemLibrary.cs" />
     <Compile Include="Items\KeyItem.cs" />
     <Compile Include="Items\Usable.cs" />
+    <Compile Include="Items\UsableItemLibrary\Pebble.cs" />
     <Compile Include="Scenes\Choice.cs" />
     <Compile Include="Scenes\Event.cs" />
     <Compile Include="Scenes\FinalScene.cs" />
