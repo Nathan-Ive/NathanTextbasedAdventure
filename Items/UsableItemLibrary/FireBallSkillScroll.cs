@@ -1,5 +1,4 @@
 ﻿using RulerOfTheTomb.Combat;
-using RulerOfTheTomb.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace TextbasedAdventure.Items.UsableItemLibrary
 {
-    internal class Pebble : Usable
+    internal class FireBallSkillScroll : SkillScroll
     {
-        public Pebble(string name, string description) : base(name, description)
+        public FireBallSkillScroll(string name, string description) : base(name, description)
         {
         }
 
         public override void Use(Actor user, Actor target)
         {
-            //When used, deals damage to the target Actor. Interrupts charge attacks.
+            //Adds the Fireball skill to the selected Actor.
         }
     }
 }

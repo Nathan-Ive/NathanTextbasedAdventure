@@ -7,6 +7,13 @@ namespace RulerOfTheTomb.Scenes
     /// <summary>
     /// Parses free-form player input against the active event's Choices,
     /// matching by keyword groups and respecting simple negation.
+    /// 
+    /// Made by AI. (Couldn't think of how to do it, so I consulted and had AI do it.)
+    /// (From what I can tell, this uses for loops to check if the terms provided by the player matches what is in the Choice script.
+    /// It then checks whether or not the player means the opposite of what they're saying or not 
+    /// to account for situations like "Check the tombs that aren't mine")
+    /// 
+    /// I only partially understand what is in this script, so if there's a bug related to this, I'll have to research it more heavily.
     /// </summary>
     public static class InputParser
     {

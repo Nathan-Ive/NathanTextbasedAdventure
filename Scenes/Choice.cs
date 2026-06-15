@@ -6,6 +6,8 @@ namespace RulerOfTheTomb.Scenes
     /// <summary>
     /// A single player-selectable choice within an Event. Holds the keyword groups
     /// the parser uses to recognize the choice and the handler that fires on match.
+    /// 
+    /// Partially made by AI. (Since AI completely made the edge cases for input, I decided I should also use it to help with the input itself.)
     /// </summary>
     public class Choice
     {

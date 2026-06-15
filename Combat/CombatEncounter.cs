@@ -8,6 +8,8 @@ namespace RulerOfTheTomb.Combat
 {
     /// <summary>
     /// The outcome of a CombatEncounter, returned to the calling scene.
+    /// 
+    /// Partially made with the help of AI. (Specifically how turns are handeled.)
     /// </summary>
     public enum CombatResult
     {
@@ -149,7 +151,7 @@ namespace RulerOfTheTomb.Combat
             return true;
         }
 
-        // ---------- Player action handlers ----------
+        // ---------- Player action handlers ---------- //
 
         private int PromptMainMenu()
         {

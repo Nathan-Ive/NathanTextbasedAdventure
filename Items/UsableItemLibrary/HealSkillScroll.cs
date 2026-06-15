@@ -1,5 +1,4 @@
 ﻿using RulerOfTheTomb.Combat;
-using RulerOfTheTomb.Items;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace TextbasedAdventure.Items.UsableItemLibrary
 {
-    internal class Pebble : Usable
+    internal class HealSkillScroll : SkillScroll
     {
-        public Pebble(string name, string description) : base(name, description)
+        public HealSkillScroll(string name, string description) : base(name, description)
         {
         }
 
         public override void Use(Actor user, Actor target)
         {
-            //When used, deals damage to the target Actor. Interrupts charge attacks.
+            // Adds the Heal skill to the selected Actor.
         }
     }
 }

@@ -3,6 +3,8 @@
     /// <summary>
     /// Static factory methods for the game's enemies. Each method returns a fresh
     /// Enemy or FinalBoss instance with that enemy's fixed stats.
+    /// 
+    /// Partially made with the help of AI. (Made more efficient for the sake of making new / resetting enemy instances.)
     /// </summary>
     public static class EnemyLibrary
     {

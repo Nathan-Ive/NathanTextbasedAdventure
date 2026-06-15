@@ -62,7 +62,12 @@
     <Compile Include="Items\ItemLibrary.cs" />
     <Compile Include="Items\KeyItem.cs" />
     <Compile Include="Items\Usable.cs" />
+    <Compile Include="Items\UsableItemLibrary\FireBallSkillScroll.cs" />
+    <Compile Include="Items\UsableItemLibrary\HealSkillScroll.cs" />
+    <Compile Include="Items\UsableItemLibrary\HPPotion.cs" />
+    <Compile Include="Items\UsableItemLibrary\MPPotion.cs" />
     <Compile Include="Items\UsableItemLibrary\Pebble.cs" />
+    <Compile Include="Items\UsableItemLibrary\SkillScroll.cs" />
     <Compile Include="Scenes\Choice.cs" />
     <Compile Include="Scenes\Event.cs" />
     <Compile Include="Scenes\FinalScene.cs" />
@@ -85,7 +90,7 @@
     <Compile Include="TemporaryThings\Animal Task\Animals.cs" />
     <Compile Include="TemporaryThings\Animal Task\Cat.cs" />
     <Compile Include="TemporaryThings\Animal Task\Lion.cs" />
-    <Compile Include="MainProgram.cs" />
+    <Compile Include="TemporaryThings\MainProgram.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TemporaryThings\Tower Defense Task\Tower.cs" />

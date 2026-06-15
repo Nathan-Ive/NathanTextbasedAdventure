@@ -4,6 +4,8 @@ namespace RulerOfTheTomb.Scenes
 {
     /// <summary>
     /// The set of words the parser treats as negating the keyword that follows them.
+    /// 
+    /// Made by AI. (Thought of the concept myself, but didn't know how to implement it.)
     /// </summary>
     internal static class NegationTokens
     {

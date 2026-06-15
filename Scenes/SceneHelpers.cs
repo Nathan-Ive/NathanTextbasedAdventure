@@ -6,6 +6,10 @@ namespace RulerOfTheTomb.Scenes
     /// <summary>
     /// Static helpers for scene presentation: narration printing, keyword highlighting,
     /// choice prompts, help command, and the main input loop for an event.
+    /// 
+    /// Partially made with the help of AI. (This exists to basically hint at the player what terms are choices.
+    /// And in extreme enough cases, it outright tells what the player has to do. I came up with this idea myself,
+    /// but I didn't know how to change the color of words in the console to make it clear that they're different from standard text.)
     /// </summary>
     public static class SceneHelpers
     {
