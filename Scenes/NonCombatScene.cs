@@ -33,8 +33,9 @@ namespace RulerOfTheTomb.Scenes
         }
 
         /// <summary>
-        /// Returns the scene that follows this one. Override or set during construction.
+        /// Returns the scene that follows this one. Defaults to the linked Next scene,
+        /// but can be overridden for branching.
         /// </summary>
-        protected virtual Scene GetNextScene() => null;
+        protected virtual Scene GetNextScene() => Next;
     }
 }

@@ -171,5 +171,150 @@ namespace RulerOfTheTomb.Scenes
                 PrintHint(hint.ToString());
             }
         }
+
+        /// <summary>
+        /// Like RunEventInput, but keeps accepting input until <paramref name="isComplete"/>
+        /// returns true (for example, once the player chooses to leave the room). This is
+        /// what makes a room non-linear: every choice stays available and can be repeated,
+        /// and the player decides when they're done. Choices that should only pay out once
+        /// are expected to guard themselves and narrate when repeated.
+        /// </summary>
+        /// <param name="scene">The scene whose active event we're handling input for.</param>
+        /// <param name="isComplete">Predicate that ends the loop when it returns true.</param>
+        public static void RunEventLoop(Scene scene, Func<bool> isComplete)
+        {
+            Event active = scene.ActiveEvent;
+            if (active == null)
+            {
+                PrintSystem("[No active event to handle input for.]");
+                return;
+            }
+
+            DisplayChoices(active);
+
+            while (!isComplete())
+            {
+                Console.Write("> ");
+                string input = Console.ReadLine() ?? "";
+
+                if (string.IsNullOrWhiteSpace(input))
+                {
+                    PrintHint("Try typing what you'd like to do, or 'help' to see your options.");
+                    continue;
+                }
+
+                string trimmed = input.Trim().ToLower();
+
+                if (trimmed == "help")
+                {
+                    PrintHelp(active);
+                    continue;
+                }
+
+                Choice matched = InputParser.Match(input, active.Choices);
+
+                if (matched == null)
+                {
+                    PrintHint("That doesn't seem to match anything you can do here. Try 'help' if you're stuck.");
+                    continue;
+                }
+
+                matched.OnSelected();
+            }
+        }
+
+        /// <summary>
+        /// Prompts the player for a yes/no answer and keeps asking until it gets one.
+        /// Used for the smaller in-room decisions (look ahead?, flip the lever?, take the item?).
+        /// </summary>
+        /// <param name="prompt">The question to show the player.</param>
+        /// <returns>True for yes, false for no.</returns>
+        public static bool AskYesNo(string prompt)
+        {
+            PrintHighlighted(prompt + " ({yes} / {no})");
+            while (true)
+            {
+                Console.Write("> ");
+                string input = (Console.ReadLine() ?? "").Trim().ToLower();
+
+                if (input == "y" || input == "yes" || input == "yeah" || input == "yep" || input == "sure")
+                    return true;
+                if (input == "n" || input == "no" || input == "nope" || input == "nah")
+                    return false;
+
+                PrintHint("Please answer yes or no.");
+            }
+        }
+
+        /// <summary>
+        /// Prompts the player to call a coin flip. Returns true for heads, false for tails.
+        /// Keeps asking until it gets a recognizable call.
+        /// </summary>
+        public static bool AskGuessHeads()
+        {
+            PrintHighlighted("Call it: {heads} or {tails}?");
+            while (true)
+            {
+                Console.Write("> ");
+                string input = (Console.ReadLine() ?? "").Trim().ToLower();
+
+                if (input == "h" || input == "head" || input == "heads") return true;
+                if (input == "t" || input == "tail" || input == "tails") return false;
+
+                PrintHint("Please call heads or tails.");
+            }
+        }
+
+        /// <summary>
+        /// Reads a free-form line from the player (used for riddle answers and coin-flip guesses).
+        /// </summary>
+        /// <returns>The trimmed, lowercased line the player typed.</returns>
+        public static string ReadLine()
+        {
+            Console.Write("> ");
+            return (Console.ReadLine() ?? "").Trim().ToLower();
+        }
+
+        /// <summary>
+        /// Returns true if the player's text mentions any of the accepted terms.
+        /// A loose, forgiving check used for riddle answers where exact wording isn't required.
+        /// </summary>
+        /// <param name="input">The raw text the player typed.</param>
+        /// <param name="terms">Accepted answer fragments.</param>
+        public static bool ContainsAny(string input, params string[] terms)
+        {
+            string lower = (input ?? "").ToLower();
+            foreach (string term in terms)
+            {
+                if (lower.Contains(term.ToLower())) return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Shows the one-time how-to-play tutorial at the very start of the game.
+        /// Explains the core interaction: This is a free-text game. Type whatever words
+        /// come to mind and press Enter, and points at the highlighted keywords and 'help'.
+        /// </summary>
+        public static void ShowTutorial()
+        {
+            PrintHint("===============  HOW TO PLAY  ===============");
+            Narrate(
+                "This is a text adventure. There are no menus to click, you play by typing.");
+            PrintHighlighted(
+                "When the game describes a room, just {type any words that come to mind} for what " +
+                "you'd like to do, then press {Enter}.");
+            Narrate(
+                "You don't need exact phrases. \"dig my own grave\", \"search the other graves\", or " +
+                "\"leave\" all work. The game looks for the important words in whatever you type.");
+            PrintHighlighted(
+                "Words shown in {this colour} are hints at what the game is listening for.");
+            PrintHint(
+                "Stuck? Type 'help' at any prompt to see the words a room is looking for.");
+            PrintHint("=============================================");
+            Console.WriteLine("Press Enter to begin...");
+            Console.ReadLine();
+            Console.WriteLine();
+        }
     }
 }

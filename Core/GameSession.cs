@@ -10,8 +10,9 @@ namespace RulerOfTheTomb.Core
     public class GameSession
     {
         /// <summary>
-        /// The player character. Persists across scenes and resets on game-over
-        /// only in stats and HP — inventory and progress carry over within one run.
+        /// The player character. 
+        /// Persists across scenes and resets on game-over only in stats and HP. 
+        /// Inventory and progress carry over within one run.
         /// </summary>
         public Player Player { get; private set; }
 
@@ -63,7 +64,7 @@ namespace RulerOfTheTomb.Core
 
         /// <summary>
         /// Resets the player to starting condition and sends them back to Scene 1.
-        /// Inventory carries over per design — only HP and combat state reset.
+        /// Inventory carries over per design, only HP and combat state reset.
         /// </summary>
         private void HandleGameOver()
         {

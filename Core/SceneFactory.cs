@@ -3,71 +3,50 @@ using RulerOfTheTomb.Scenes;
 namespace RulerOfTheTomb.Core
 {
     /// <summary>
-    /// Constructs the game's scenes with their events, choices, and loot tables.
-    /// Each method returns a fully populated Scene ready to run.
-    /// Content is filled in during the content phase; for now these are stubs
-    /// so GameSession and the framework can compile and be tested.
+    /// Builds the game's scenes, wires each one's events, and links them into a chain.
+    /// CreateScene1 is the single entry point used by GameSession. 
+    /// It constructs the whole run and returns the first scene, so a game-over (which rebuilds from Scene 1) 
+    /// gets a fresh chain while the player's inventory carries over.
     /// </summary>
     public static class SceneFactory
     {
         /// <summary>
-        /// Constructs Scene 1: waking up in the tomb. No combat.
+        /// Builds the entire scene chain and returns the opening scene (Scene 1).
         /// </summary>
         public static Scene CreateScene1()
         {
-            var scene = new NonCombatScene("Scene 1 — The Awakening");
-            // TODO: populate events (grave-digging choices, pouch pickup, exit).
-            return scene;
-        }
+            // Scene 1 — The Awakening (non-combat, fully non-linear exploration).
+            var scene1 = new NonCombatScene("Scene 1 — The Awakening");
+            scene1.Events.Add(new AwakeningEvent());
 
-        /// <summary>
-        /// Constructs Scene 2: the Legless Fellow encounter. Combat scene.
-        /// </summary>
-        public static Scene CreateScene2()
-        {
-            var scene = new NormalScene("Scene 2 — The Legless Fellow");
-            // TODO: populate exploration events (floor/walls/ceiling), combat, post-battle loot.
-            return scene;
-        }
+            // Scene 2 — The Legless Fellow (explore, then an unavoidable fight).
+            var scene2 = new NormalScene("Scene 2 — The Legless Fellow");
+            scene2.Events.Add(new LeglessFellowEvent());
 
-        /// <summary>
-        /// Constructs Scene 3: the Riddling Trove encounter. Combat scene with riddle skip.
-        /// </summary>
-        public static Scene CreateScene3()
-        {
-            var scene = new NormalScene("Scene 3 — The Riddling Trove");
-            // TODO: populate riddle event, combat fallback, post-battle loot.
-            return scene;
-        }
+            // Scene 3 — The Riddling Trove (riddles, or a fight on failure).
+            var scene3 = new NormalScene("Scene 3 — The Riddling Trove");
+            scene3.Events.Add(new RiddlingTroveEvent());
 
-        /// <summary>
-        /// Constructs Scene 4: the underground river interlude. No combat.
-        /// </summary>
-        public static Scene CreateScene4()
-        {
-            var scene = new NonCombatScene("Scene 4 — The Underground River");
-            // TODO: populate three NPC dialogues (blessed hint, cursed hint, spell drop).
-            return scene;
-        }
+            // Scene 4 — The Underground River (one conversation, then a restful crossing).
+            var scene4 = new NonCombatScene("Scene 4 — The Underground River");
+            scene4.Events.Add(new RiverCrossingEvent());
 
-        /// <summary>
-        /// Constructs Scene 5: the Radiant Warrior and Dull Scholar. Combat scene with kill-order event.
-        /// </summary>
-        public static Scene CreateScene5()
-        {
-            var scene = new NormalScene("Scene 5 — The Twin Guards");
-            // TODO: populate combat with kill-order event-skill drops.
-            return scene;
-        }
+            // Scene 5 — The Twin Guards (loot, then a two-stage fight; kill order matters).
+            var scene5 = new NormalScene("Scene 5 — The Twin Guards");
+            scene5.Events.Add(new TwinGuardsEvent());
 
-        /// <summary>
-        /// Constructs the Final Scene: the Legend King. Ends in an Ending regardless of outcome.
-        /// </summary>
-        public static Scene CreateFinalScene()
-        {
-            var scene = new FinalScene("Final Scene — The Legend King");
-            // TODO: populate boss combat with phase transition and fireball charge event.
-            return scene;
+            // Final Scene — The Legend King (boss fight that always resolves to an ending).
+            var finalScene = new FinalScene("Final Scene — The Legend King");
+            finalScene.Events.Add(new LegendKingEvent());
+
+            // Link the chain.
+            scene1.Next = scene2;
+            scene2.Next = scene3;
+            scene3.Next = scene4;
+            scene4.Next = scene5;
+            scene5.Next = finalScene;
+
+            return scene1;
         }
     }
 }

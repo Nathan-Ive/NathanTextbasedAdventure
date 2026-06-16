@@ -56,14 +56,13 @@ namespace RulerOfTheTomb.Scenes
         public string Name { get; protected set; }
 
         /// <summary>
-        /// Items available to be picked up during this scene. Cleared on scene exit —
-        /// missed items are gone forever.
+        /// Items available to be picked up during this scene. Cleared on scene exit, missed items are gone forever.
         /// </summary>
         public List<Item> AvailablePickups { get; protected set; } = new List<Item>();
 
         /// <summary>
         /// The chain of events that make up this scene. Run in order, though branching
-        /// is allowed — an event can activate a non-sequential next event.
+        /// is allowed, an event can activate a non-sequential next event.
         /// </summary>
         public List<Event> Events { get; protected set; } = new List<Event>();
 
@@ -71,6 +70,13 @@ namespace RulerOfTheTomb.Scenes
         /// The currently active event, used for routing player input and Help output.
         /// </summary>
         public Event ActiveEvent => Events.Find(e => e.IsActive);
+
+        /// <summary>
+        /// The scene that follows this one in the chain. Set by SceneFactory when the
+        /// game is built. NonCombatScene and NormalScene return this from GetNextScene;
+        /// FinalScene ignores it (the game ends there).
+        /// </summary>
+        public Scene Next { get; set; }
 
         /// <summary>
         /// Constructs a scene with the given name.

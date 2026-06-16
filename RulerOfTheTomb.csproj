@@ -50,6 +50,7 @@
     <Compile Include="Combat\EnemyLibrary.cs" />
     <Compile Include="Combat\EquipmentSlot.cs" />
     <Compile Include="Combat\Inventory.cs" />
+    <Compile Include="Combat\LegendKing.cs" />
     <Compile Include="Combat\Player.cs" />
     <Compile Include="Combat\PlayerStatus.cs" />
     <Compile Include="Core\EndingDisplay.cs" />
@@ -70,6 +71,12 @@
     <Compile Include="Items\UsableItemLibrary\SkillScroll.cs" />
     <Compile Include="Scenes\Choice.cs" />
     <Compile Include="Scenes\Event.cs" />
+    <Compile Include="Scenes\Events\AwakeningEvents.cs" />
+    <Compile Include="Scenes\Events\LegendKingEvents.cs" />
+    <Compile Include="Scenes\Events\LeglessFellowEvents.cs" />
+    <Compile Include="Scenes\Events\RiddlingTroveEvents.cs" />
+    <Compile Include="Scenes\Events\RiverCrossingEvents.cs" />
+    <Compile Include="Scenes\Events\TwinGuardsEvents.cs" />
     <Compile Include="Scenes\FinalScene.cs" />
     <Compile Include="Scenes\InputParser.cs" />
     <Compile Include="Scenes\NegationTerms.cs" />

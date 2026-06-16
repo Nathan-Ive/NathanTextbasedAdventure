@@ -1,4 +1,5 @@
 using RulerOfTheTomb.Core;
+using RulerOfTheTomb.Scenes;
 
 namespace RulerOfTheTomb
 {
@@ -18,6 +19,10 @@ namespace RulerOfTheTomb
             System.Console.WriteLine("-----------------");
             System.Console.Write("Enter your name: ");
             string name = System.Console.ReadLine() ?? "Skeleton";
+            System.Console.WriteLine();
+
+            // Quick how-to-play before the first room.
+            SceneHelpers.ShowTutorial();
 
             var session = new GameSession(string.IsNullOrWhiteSpace(name) ? "Skeleton" : name);
             session.Run();

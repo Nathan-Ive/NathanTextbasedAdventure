@@ -5,7 +5,7 @@ namespace RulerOfTheTomb.Items
     /// <summary>
     /// Static catalog of factory methods for Equipment and Key Items.
     /// Each method returns a fresh instance with that item's fixed stats and alignment.
-    /// Usables are not handled here — they live as their own subclasses due to unique behavior.
+    /// Usables are not handled here, they exist as their own subclasses due to unique behavior.
     /// 
     /// Partially made with the help of AI. (Similar to the EnemyLibrary script. I did this one on my own,
     /// since I had the EnemyLibrary to use as an example for how I should set up instanced objects.

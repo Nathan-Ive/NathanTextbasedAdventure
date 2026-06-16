@@ -13,11 +13,11 @@
         /// </summary>
         public static Enemy CreateLeglessFellow() => new Enemy(
             name: "Legless Fellow",
-            maxHp: 100, 
+            maxHp: 1,
             maxMp: 10,
-            strength: 38, 
+            strength: 38,
             magic: 1,
-            defense: 30, 
+            defense: 30,
             magicDefense: 26,
             speed: 5
         );
@@ -27,11 +27,11 @@
         /// </summary>
         public static Enemy CreateRiddlingTrove() => new Enemy(
             name: "Riddling Trove",
-            maxHp: 500, 
+            maxHp: 1,
             maxMp: 20,
-            strength: 20, 
+            strength: 20,
             magic: 10,
-            defense: 12, 
+            defense: 12,
             magicDefense: 12,
             speed: 12
         );
@@ -41,11 +41,11 @@
         /// </summary>
         public static Enemy CreateRadiantWarrior() => new Enemy(
             name: "Radiant Warrior",
-            maxHp: 750, 
+            maxHp: 1,
             maxMp: 0,
-            strength: 30, 
+            strength: 30,
             magic: 5,
-            defense: 28, 
+            defense: 28,
             magicDefense: 24,
             speed: 20);
 
@@ -54,11 +54,11 @@
         /// </summary>
         public static Enemy CreateDullScholar() => new Enemy(
             name: "Dull Scholar",
-            maxHp: 450, 
+            maxHp: 1,
             maxMp: 300,
-            strength: 18, 
+            strength: 18,
             magic: 22,
-            defense: 6, 
+            defense: 6,
             magicDefense: 12,
             speed: 9
         );
@@ -66,13 +66,13 @@
         /// <summary>
         /// The final boss. Defeating or losing to him ends the game.
         /// </summary>
-        public static FinalBoss CreateLegendKing() => new FinalBoss(
+        public static FinalBoss CreateLegendKing() => new LegendKing(
             name: "Legend King",
-            maxHp: 1000, 
+            maxHp: 1000,
             maxMp: 150,
-            strength: 38, 
+            strength: 38,
             magic: 38,
-            defense: 32, 
+            defense: 32,
             magicDefense: 30,
             speed: 18
         );
