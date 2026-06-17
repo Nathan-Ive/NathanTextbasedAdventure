@@ -60,8 +60,9 @@ namespace RulerOfTheTomb.Combat
         /// Also respects the DefenseMultiplier set during Defend.
         /// </summary>
         /// <param name="rawDamage">The pre-mitigation damage value.</param>
+        /// <param name="isMagic">True if this is magic damage (mitigated by Magic Defense).</param>
         /// <returns>The actual damage dealt after defense, dodge, and revive logic.</returns>
-        public override int TakeDamage(int rawDamage)
+        public override int TakeDamage(int rawDamage, bool isMagic = false)
         {
             // Hexed: chance to dodge entirely (placeholder %; tune later)
             if (Status == PlayerStatus.Hexed && RollDodge(0.4))
@@ -70,7 +71,7 @@ namespace RulerOfTheTomb.Combat
             }
 
             int scaled = (int)System.Math.Round(rawDamage * DefenseMultiplier);
-            int dealt = base.TakeDamage(scaled);
+            int dealt = base.TakeDamage(scaled, isMagic);
 
             // Blessed: if this hit would have killed us and revive is unused, restore to 1 HP.
             if (Status == PlayerStatus.Blessed && CurrentHp == 0 && !ReviveUsed)

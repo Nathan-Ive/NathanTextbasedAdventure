@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using RulerOfTheTomb.Items;
 using RulerOfTheTomb.Scenes;
 using RulerOfTheTomb.Skills;
 using RulerOfTheTomb.Utility;
@@ -73,7 +74,7 @@ namespace RulerOfTheTomb.Combat
         /// <returns>The CombatResult describing how the fight ended.</returns>
         public CombatResult Run()
         {
-            bool playerFirst = _player.Speed >= _enemy.Speed;
+            bool playerFirst = _player.EffectiveSpeed >= _enemy.EffectiveSpeed;
 
             while (true)
             {
@@ -163,7 +164,7 @@ namespace RulerOfTheTomb.Combat
 
         private bool PerformAttack()
         {
-            int damage = CalculatePlayerDamage(_player.Strength, isPhysical: true);
+            int damage = CalculatePlayerDamage(_player.EffectiveStrength, isPhysical: true);
             _enemy.TakeDamage(damage);
             SceneHelpers.Narrate($"You strike {_enemy.Name} for {damage} damage.");
             ApplyCursedRecoil(damage);
@@ -195,8 +196,9 @@ namespace RulerOfTheTomb.Combat
             LearnedSkill chosen = usable[pick - 1];
             _player.UseSkill(chosen, _enemy);
 
-            if (chosen.Skill.EffectType == SkillEffectType.PhysicalDamage)
-                ApplyCursedRecoil(chosen.Skill.Power + _player.Strength);
+            if (chosen.Skill.EffectType == SkillEffectType.PhysicalDamage ||
+                chosen.Skill.EffectType == SkillEffectType.TrueDamage)
+                ApplyCursedRecoil(chosen.Skill.Power + _player.EffectiveStrength);
 
             return true;
         }
@@ -212,19 +214,76 @@ namespace RulerOfTheTomb.Combat
         {
             if (!_player.Inventory.HasPouch)
             {
-                SceneHelpers.PrintHint("You have no pouch to draw items from. Use your equipment slots instead.");
+                SceneHelpers.PrintHint("You have no pouch to draw items from.");
                 return false;
             }
-            // Full item-pick UI would list bag usables; stubbed for now.
-            SceneHelpers.PrintHint("[Item menu not yet wired to inventory contents.]");
-            return false;
+
+            List<Usable> usables = _player.Inventory.GetBagUsables();
+            if (usables.Count == 0)
+            {
+                SceneHelpers.PrintHint("Your pouch has no usable items.");
+                return false;
+            }
+
+            for (int i = 0; i < usables.Count; i++)
+                SceneHelpers.Narrate($"{i + 1}. {usables[i].Name}");
+            SceneHelpers.Narrate("0. Back");
+
+            Console.Write("> ");
+            if (!int.TryParse(Console.ReadLine(), out int pick) || pick < 0 || pick > usables.Count)
+                return false;
+            if (pick == 0) return false;
+
+            Usable chosen = usables[pick - 1];
+            chosen.Use(_player, _enemy);
+            _player.Inventory.RemoveFromBag(chosen);
+            return true;
         }
 
         private bool PerformEquipment()
         {
-            // Allow using a held item from a hand slot, or swap equipment.
-            SceneHelpers.PrintHint("[Equipment menu stub.]");
-            return false;
+            SceneHelpers.Narrate("Currently equipped:");
+            bool anyWorn = false;
+            foreach (var kv in _player.Inventory.WornEquipment())
+            {
+                SceneHelpers.Narrate($"  [{kv.Key}] {kv.Value.Name}");
+                anyWorn = true;
+            }
+            if (!anyWorn) SceneHelpers.Narrate("  (nothing)");
+
+            if (!_player.Inventory.HasPouch)
+            {
+                SceneHelpers.PrintHint("Without a pouch you can't swap gear mid-fight; there's nowhere to stow what you remove.");
+                return false;
+            }
+
+            List<Equipment> bagged = _player.Inventory.GetBagEquipment();
+            if (bagged.Count == 0)
+            {
+                SceneHelpers.PrintHint("You have no spare equipment in your pouch to swap to.");
+                return false;
+            }
+
+            SceneHelpers.Narrate("Equip which item?");
+            for (int i = 0; i < bagged.Count; i++)
+                SceneHelpers.Narrate($"{i + 1}. {bagged[i].Name} ({bagged[i].Slot})");
+            SceneHelpers.Narrate("0. Back");
+
+            Console.Write("> ");
+            if (!int.TryParse(Console.ReadLine(), out int pick) || pick < 0 || pick > bagged.Count)
+                return false;
+            if (pick == 0) return false;
+
+            Equipment toWear = bagged[pick - 1];
+            _player.Inventory.RemoveFromBag(toWear);
+            List<Equipment> displaced = _player.Inventory.Equip(toWear, toWear.Slot);
+            foreach (Equipment d in displaced)
+                _player.Inventory.Add(d); // returns to the bag
+            _player.RecalculateStatus();
+
+            SceneHelpers.Narrate($"You equip the {toWear.Name}.");
+            SceneHelpers.PrintHint($"[Status: {_player.Status}]");
+            return true;
         }
 
         // ---------- Damage helpers ----------

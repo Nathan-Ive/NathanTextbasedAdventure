@@ -8,6 +8,7 @@ namespace RulerOfTheTomb.Skills
     {
         PhysicalDamage,     // Damage that is dealt based on physical defense
         MagicDamage,        // Damage that is dealt based on magic defense
+        TrueDamage,         // Physical damage that ignores defense entirely (scales with Strength)
         Heal,               // Recovers health based on case sensitive statistics
         Passive,            // Skills that cannot be used (0 PP), but are constantly active or activate every turn.
         Event               // Triggers an enemy-only event instead of dealing damage or healing. (Do not give to Player)

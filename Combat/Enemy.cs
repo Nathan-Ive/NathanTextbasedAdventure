@@ -26,8 +26,16 @@ namespace RulerOfTheTomb.Combat
         /// <param name="target">The actor this enemy is fighting, typically the Player.</param>
         public virtual void TakeTurn(Actor target)
         {
-            int dealt = target.TakeDamage(Strength);
+            int dealt = target.TakeDamage(EffectiveStrength);
             Console.WriteLine($"{Name} attacks {target.Name} for {dealt} damage.");
         }
+
+        /// <summary>
+        /// Hook for interrupting a charging or scripted action (for example, a thrown rock
+        /// breaking the Legend King's fireball charge). Default enemies have nothing to
+        /// interrupt, so this does nothing.
+        /// </summary>
+        /// <returns>True if something was actually interrupted.</returns>
+        public virtual bool Interrupt() => false;
     }
 }

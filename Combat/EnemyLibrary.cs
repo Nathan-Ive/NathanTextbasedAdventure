@@ -13,7 +13,7 @@
         /// </summary>
         public static Enemy CreateLeglessFellow() => new Enemy(
             name: "Legless Fellow",
-            maxHp: 1,
+            maxHp: 100,
             maxMp: 10,
             strength: 38,
             magic: 1,
@@ -27,7 +27,7 @@
         /// </summary>
         public static Enemy CreateRiddlingTrove() => new Enemy(
             name: "Riddling Trove",
-            maxHp: 1,
+            maxHp: 250,
             maxMp: 20,
             strength: 20,
             magic: 10,
@@ -41,7 +41,7 @@
         /// </summary>
         public static Enemy CreateRadiantWarrior() => new Enemy(
             name: "Radiant Warrior",
-            maxHp: 1,
+            maxHp: 300,
             maxMp: 0,
             strength: 30,
             magic: 5,
@@ -54,7 +54,7 @@
         /// </summary>
         public static Enemy CreateDullScholar() => new Enemy(
             name: "Dull Scholar",
-            maxHp: 1,
+            maxHp: 200,
             maxMp: 300,
             strength: 18,
             magic: 22,
@@ -68,7 +68,7 @@
         /// </summary>
         public static FinalBoss CreateLegendKing() => new LegendKing(
             name: "Legend King",
-            maxHp: 1000,
+            maxHp: 350,
             maxMp: 150,
             strength: 38,
             magic: 38,

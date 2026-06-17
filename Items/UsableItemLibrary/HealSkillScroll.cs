@@ -1,12 +1,12 @@
 ﻿using RulerOfTheTomb.Combat;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using RulerOfTheTomb.Scenes;
+using RulerOfTheTomb.Skills;
 
 namespace TextbasedAdventure.Items.UsableItemLibrary
 {
+    /// <summary>
+    /// A skill scroll that teaches the user the Heal spell when used.
+    /// </summary>
     internal class HealSkillScroll : SkillScroll
     {
         public HealSkillScroll(string name, string description) : base(name, description)
@@ -15,7 +15,8 @@ namespace TextbasedAdventure.Items.UsableItemLibrary
 
         public override void Use(Actor user, Actor target)
         {
-            // Adds the Heal skill to the selected Actor.
+            user.Skills.Add(new LearnedSkill(SkillLibrary.Heal));
+            SceneHelpers.Narrate($"You study the {Name} and learn Heal.");
         }
     }
 }

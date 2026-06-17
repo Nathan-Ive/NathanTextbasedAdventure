@@ -55,7 +55,7 @@ namespace RulerOfTheTomb.Skills
             description: "A heavy physical blow that uses the trait unique to the Stellar-Mass Greatsword to deal a swift heavy blow to the enemy.",
             maxPp: 20,
             effectType: SkillEffectType.PhysicalDamage,
-            power: 5
+            power: 18
         );
 
         /// <summary>
@@ -65,12 +65,12 @@ namespace RulerOfTheTomb.Skills
             name: "Bone Crushing Blow",
             description: "A blow unique to the menacing Marrow-Splitter Mace. Destroy's the opponents bones on impact, inficting extreme levels of damage.",
             maxPp: 10,
-            effectType: SkillEffectType.PhysicalDamage,
-            power: 8
+            effectType: SkillEffectType.TrueDamage,
+            power: 12
         );
 
 
-        
+
         // --- Skill Scroll Skills --- //
 
         /// <summary>
@@ -81,7 +81,7 @@ namespace RulerOfTheTomb.Skills
             description: "A powerful magic technique. Once mastered, it is an attack with no equal, fit for a king.",
             maxPp: 5,
             effectType: SkillEffectType.MagicDamage,
-            power: 20
+            power: 26
         );
 
         public static readonly Skill Heal = new Skill(
@@ -136,7 +136,7 @@ namespace RulerOfTheTomb.Skills
             power: 40
         );
 
-        
+
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RulerOfTheTomb.Items;
 
@@ -136,6 +137,52 @@ namespace RulerOfTheTomb.Combat
         /// Returns the equipment currently worn in the given slot, or null if empty.
         /// </summary>
         public Equipment GetEquipped(EquipmentSlot slot) => _equipment[slot];
+
+        // ---------- Equipment stat bonuses (summed across worn gear) ----------
+
+        /// <summary>Total Strength granted by all currently worn equipment.</summary>
+        public int BonusStrength() => SumBonus(e => e.StrengthBonus);
+
+        /// <summary>Total Magic granted by all currently worn equipment.</summary>
+        public int BonusMagic() => SumBonus(e => e.MagicBonus);
+
+        /// <summary>Total Defense granted by all currently worn equipment.</summary>
+        public int BonusDefense() => SumBonus(e => e.DefenseBonus);
+
+        /// <summary>Total Magic Defense granted by all currently worn equipment.</summary>
+        public int BonusMagicDefense() => SumBonus(e => e.MagicDefenseBonus);
+
+        /// <summary>Total Speed granted by all currently worn equipment.</summary>
+        public int BonusSpeed() => SumBonus(e => e.SpeedBonus);
+
+        private int SumBonus(Func<Equipment, int> selector) =>
+            _equipment.Values.Where(e => e != null).Sum(selector);
+
+        // ---------- Bag access (for the in-combat item and equipment menus) ----------
+
+        /// <summary>
+        /// The consumable (Usable) items currently in the bag. Empty if there's no pouch.
+        /// </summary>
+        public List<Usable> GetBagUsables() => _bag.OfType<Usable>().ToList();
+
+        /// <summary>
+        /// The equipment currently sitting in the bag (not worn). Empty if there's no pouch.
+        /// </summary>
+        public List<Equipment> GetBagEquipment() => _bag.OfType<Equipment>().ToList();
+
+        /// <summary>
+        /// Removes a single item from the bag. Used when a consumable is spent or a bagged
+        /// piece of equipment is worn.
+        /// </summary>
+        /// <param name="item">The item to remove.</param>
+        /// <returns>True if the item was present and removed.</returns>
+        public bool RemoveFromBag(Item item) => _bag.Remove(item);
+
+        /// <summary>
+        /// All currently worn equipment, paired with the slot it occupies (skips empty slots).
+        /// </summary>
+        public IEnumerable<KeyValuePair<EquipmentSlot, Equipment>> WornEquipment() =>
+            _equipment.Where(kv => kv.Value != null);
 
         // ---------- Counting (for Player to ask about status & ending) ----------
 

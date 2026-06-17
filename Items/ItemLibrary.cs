@@ -5,7 +5,7 @@ namespace RulerOfTheTomb.Items
     /// <summary>
     /// Static catalog of factory methods for Equipment and Key Items.
     /// Each method returns a fresh instance with that item's fixed stats and alignment.
-    /// Usables are not handled here, they exist as their own subclasses due to unique behavior.
+    /// Usables are not handled here — they live as their own subclasses due to unique behavior.
     /// 
     /// Partially made with the help of AI. (Similar to the EnemyLibrary script. I did this one on my own,
     /// since I had the EnemyLibrary to use as an example for how I should set up instanced objects.
@@ -68,8 +68,8 @@ namespace RulerOfTheTomb.Items
             name: "Stellar-Mass Greatsword",
             description: "A massive sword that should be impossibly heavy. In your hands, it weighs nothing.",
             slot: EquipmentSlot.RightHand,
-            strBonus: 13,
-            magBonus: 8,
+            strBonus: 24,
+            magBonus: 12,
             defBonus: 3,
             mdefBonus: 3,
             isTwoHanded: true,
@@ -84,7 +84,7 @@ namespace RulerOfTheTomb.Items
             name: "Marrow-Splitter Mace",
             description: "A heavy mace that jolts your bones with cruel energy the moment you grip it.",
             slot: EquipmentSlot.RightHand,
-            strBonus: 14,
+            strBonus: 22,
             spdBonus: 1,
             alignment: Alignment.Cursed);
 

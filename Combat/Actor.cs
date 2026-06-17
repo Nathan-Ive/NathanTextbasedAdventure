@@ -41,6 +41,25 @@ namespace RulerOfTheTomb.Combat
         /// </summary>
         public bool IsAlive => CurrentHp > 0;
 
+        // --- Effective stats: base stat plus the bonuses from all currently worn equipment.
+        //     Combat always reads these so that gear actually matters. Enemies wear nothing,
+        //     so for them Effective* equals their base stat.
+
+        /// <summary>Strength including equipment bonuses.</summary>
+        public int EffectiveStrength => Strength + Inventory.BonusStrength();
+
+        /// <summary>Magic including equipment bonuses.</summary>
+        public int EffectiveMagic => Magic + Inventory.BonusMagic();
+
+        /// <summary>Defense including equipment bonuses.</summary>
+        public int EffectiveDefense => Defense + Inventory.BonusDefense();
+
+        /// <summary>Magic Defense including equipment bonuses.</summary>
+        public int EffectiveMagicDefense => MagicDefense + Inventory.BonusMagicDefense();
+
+        /// <summary>Speed including equipment bonuses.</summary>
+        public int EffectiveSpeed => Speed + Inventory.BonusSpeed();
+
         /// <summary>
         /// Constructs an actor with the given base stats and a fresh empty inventory.
         /// CurrentHp and CurrentMp start at their maximum values. The basic attack is
@@ -75,13 +94,16 @@ namespace RulerOfTheTomb.Combat
         }
 
         /// <summary>
-        /// Applies incoming damage to the actor after mitigation by Defense.
+        /// Applies incoming damage to the actor after mitigation. Physical damage is reduced
+        /// by Effective Defense, magic damage by Effective Magic Defense.
         /// </summary>
         /// <param name="rawDamage">The pre-mitigation damage value.</param>
+        /// <param name="isMagic">True if this is magic damage (mitigated by Magic Defense).</param>
         /// <returns>The actual damage dealt after defense is applied.</returns>
-        public virtual int TakeDamage(int rawDamage)
+        public virtual int TakeDamage(int rawDamage, bool isMagic = false)
         {
-            int finalDamage = System.Math.Max(1, rawDamage - Defense);
+            int mitigation = isMagic ? EffectiveMagicDefense : EffectiveDefense;
+            int finalDamage = System.Math.Max(1, rawDamage - mitigation);
             CurrentHp = System.Math.Max(0, CurrentHp - finalDamage);
             return finalDamage;
         }
@@ -103,6 +125,15 @@ namespace RulerOfTheTomb.Combat
         public virtual void Heal(int amount)
         {
             CurrentHp = System.Math.Min(MaxHp, CurrentHp + amount);
+        }
+
+        /// <summary>
+        /// Restores MP up to the actor's maximum.
+        /// </summary>
+        /// <param name="amount">The amount of MP to restore.</param>
+        public void RestoreMp(int amount)
+        {
+            CurrentMp = System.Math.Min(MaxMp, CurrentMp + amount);
         }
 
         /// <summary>
@@ -133,13 +164,17 @@ namespace RulerOfTheTomb.Combat
             switch (skill.EffectType)
             {
                 case SkillEffectType.PhysicalDamage:
-                    target.TakeDamage(Strength + skill.Power);
+                    target.TakeDamage(EffectiveStrength + skill.Power, isMagic: false);
                     break;
                 case SkillEffectType.MagicDamage:
-                    target.TakeDamage(Magic + skill.Power);
+                    target.TakeDamage(EffectiveMagic + skill.Power, isMagic: true);
+                    break;
+                case SkillEffectType.TrueDamage:
+                    // Ignores defense entirely; the raw hit lands in full.
+                    target.TakeRawDamage(EffectiveStrength + skill.Power);
                     break;
                 case SkillEffectType.Heal:
-                    Heal(skill.Power);
+                    Heal(EffectiveMagic + skill.Power);
                     break;
                 case SkillEffectType.Event:
                     // Event skills do nothing on their own; the OnUse callback handles it.
